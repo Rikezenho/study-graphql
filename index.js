@@ -36,7 +36,10 @@ const resolvers = {
     },
     Produto: {
         precoComDesconto(produto) {
-            return produto.preco - (produto.preco * produto.desconto);
+            if (produto.desconto) {
+                return produto.preco - (produto.preco * produto.desconto);
+            }
+            return produto.preco;
         }
     },
     Query: {
