@@ -37,7 +37,7 @@ const resolvers = {
     Produto: {
         precoComDesconto(produto) {
             if (produto.desconto) {
-                return produto.preco - (produto.preco * produto.desconto);
+                return produto.preco * (1 - produto.desconto);
             }
             return produto.preco;
         }
