@@ -1,0 +1,11 @@
+type Query {
+    ola: String!
+    horaCerta: Date!
+    usuarioLogado: Usuario
+    produtoEmDestaque: Produto
+    numerosMegaSena: [Int!]!
+    usuarios: [Usuario]
+    usuario(id: ID): Usuario
+    perfis: [Perfil]
+    perfil(id: ID): Perfil
+}   
