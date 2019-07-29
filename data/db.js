@@ -6,7 +6,8 @@ const usuarios = [
         idade: 20,
         salario_real: 2000,
         vip: false,
-        perfil_id: '1'
+        perfil_id: '1',
+        status: 'ATIVO'
     },
     {
         id: '3',
@@ -15,7 +16,8 @@ const usuarios = [
         idade: 25,
         salario_real: 4000,
         vip: false,
-        perfil_id: '2'
+        perfil_id: '2',
+        status: 'INATIVO'
     },
     {
         id: '4',
@@ -24,7 +26,8 @@ const usuarios = [
         idade: 22,
         salario_real: 5000,
         vip: true,
-        perfil_id: '1'
+        perfil_id: '1',
+        status: 'BLOQUEADO'
     }
 ]
 
