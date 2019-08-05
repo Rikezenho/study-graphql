@@ -8,7 +8,7 @@ module.exports = {
         const perfilExiste = perfis
             .some(u => u.nome === nome)
         
-        if (perfilExiste) throw new Error('E-mail já cadastrado!')
+        if (perfilExiste) throw new Error('Perfil já cadastrado!')
 
         const novo = {
             id: proximoId(),
