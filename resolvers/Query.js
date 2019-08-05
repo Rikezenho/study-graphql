@@ -1,4 +1,5 @@
 const { usuarios, perfis } = require('../data/db')
+const { indiceUsuario } = require('../utils')
 
 module.exports = {
     usuarioLogado() {
@@ -24,10 +25,10 @@ module.exports = {
     usuarios() {
         return usuarios
     },
-    usuario(_, { id }) {
-        const selecionados = usuarios
-            .filter(u => u.id === id)
-        return selecionados ? selecionados[0] : null
+    usuario(_, { filtro }) {
+        const i = indiceUsuario(filtro)
+        if (i < 0) throw new Error('Usuário não encontrado!')
+        return usuarios[0]
     },
     perfis() {
         return perfis
