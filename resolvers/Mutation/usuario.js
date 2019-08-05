@@ -1,5 +1,5 @@
-const { usuarios, proximoId }  = require('../data/db')
-const { indiceUsuario } = require('../utils')
+const { usuarios, proximoId }  = require('../../data/db')
+const { indiceUsuario } = require('../../utils')
 
 module.exports = {
     novoUsuario(_, { dados }) {
