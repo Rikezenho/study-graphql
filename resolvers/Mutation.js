@@ -1,7 +1,9 @@
 const { usuarios, proximoId }  = require('../data/db')
 
 module.exports = {
-    novoUsuario(_, { nome, email, idade }) {
+    novoUsuario(_, { dados }) {
+        const { nome, email, idade } = dados
+
         const emailExiste = usuarios
             .some(u => u.email === email)
         
@@ -30,7 +32,9 @@ module.exports = {
             ? excluidos[0]
             : null
     },
-    alterarUsuario(_, { id, nome, email, idade }) {
+    alterarUsuario(_, { id, dados }) {
+        const { nome, email, idade } = dados
+
         const i = usuarios
             .findIndex(u => u.id === id)
         
