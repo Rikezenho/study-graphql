@@ -33,11 +33,11 @@ module.exports = {
             : null
     },
     alterarUsuario(_, { filtro, dados }) {
-        const { nome, email, idade } = dados
-
         const i = indiceUsuario(filtro)
         
         if (i < 0) throw new Error('Usuário não encontrado!')
+
+        const { nome, email, idade } = dados
 
         const usuario = {
             ...usuarios[i],
