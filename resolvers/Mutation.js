@@ -6,7 +6,7 @@ module.exports = {
             .some(u => u.email === email)
         
         if (emailExiste) throw new Error('E-mail já cadastrado!')
-        
+
         const novo = {
             id: proximoId(),
             nome,
@@ -18,5 +18,16 @@ module.exports = {
 
         usuarios.push(novo)
         return novo
+    },
+    excluirUsuario(_, { id }) {
+        const i = usuarios
+            .findIndex(u => u.id === id)
+        
+        if (i < 0) return null
+        const excluidos = usuarios.splice(i, 1)
+
+        return excluidos
+            ? excluidos[0]
+            : null
     }
 }
