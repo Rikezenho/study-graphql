@@ -1,6 +1,4 @@
 type Query {
-    ola: String!
-    horaCerta: Date!
     usuarioLogado: Usuario
     produtoEmDestaque: Produto
     numerosMegaSena: [Int!]!

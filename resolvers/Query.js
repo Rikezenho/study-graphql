@@ -1,12 +1,6 @@
 const { usuarios, perfis } = require('../data/db')
 
 module.exports = {
-    ola() {
-        return 'Basta retornar uma string'
-    },
-    horaCerta() {
-        return new Date
-    },
     usuarioLogado() {
         return {
             id: '1',
