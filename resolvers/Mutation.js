@@ -23,7 +23,7 @@ module.exports = {
         const i = usuarios
             .findIndex(u => u.id === id)
         
-        if (i < 0) return null
+        if (i < 0) throw new Error('Usuário não encontrado!')
         const excluidos = usuarios.splice(i, 1)
 
         return excluidos
