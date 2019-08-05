@@ -1,0 +1,13 @@
+type Perfil {
+    id: ID
+    nome: String
+}
+
+input PerfilInput {
+    nome: String
+}
+
+input PerfilFiltro {
+    id: Int
+    nome: String
+}

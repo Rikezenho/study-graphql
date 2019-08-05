@@ -3,6 +3,11 @@ function proximoId() {
     return id++
 }
 
+let perfilId = 1
+function proximoPerfilId() {
+    return perfilId++
+}
+
 const usuarios = [
     {
         id: proximoId(),
@@ -38,11 +43,11 @@ const usuarios = [
 
 const perfis = [
     {
-        id: '1',
+        id: proximoPerfilId(),
         nome: 'Comum'
     },
     {
-        id: '2',
+        id: proximoPerfilId(),
         nome: 'Administrador'
     }
 ]
@@ -50,5 +55,6 @@ const perfis = [
 module.exports = {
     usuarios,
     perfis,
-    proximoId
+    proximoId,
+    proximoPerfilId
 }
