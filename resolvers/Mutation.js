@@ -29,5 +29,22 @@ module.exports = {
         return excluidos
             ? excluidos[0]
             : null
+    },
+    alterarUsuario(_, { id, nome, email, idade }) {
+        const i = usuarios
+            .findIndex(u => u.id === id)
+        
+        if (i < 0) throw new Error('Usuário não encontrado!')
+
+        const usuario = {
+            ...usuarios[i],
+            nome,
+            email,
+            idade
+        }
+
+        usuarios.splice(i, 1, usuario)
+
+        return usuario
     }
 }
